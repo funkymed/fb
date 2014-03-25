@@ -1,22 +1,21 @@
 {
-    "name": "funkymed/fb",
-    "description": "Simple way to get facebook session",
-    "keywords": ["facebook", "cookieless"],
-    "homepage": "http://github.com/funkymed/fb.git",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Cyril Pereira",
-            "email": "cyril.pereira@gmail.com",
-            "homepage": "http://www.cyrilpereira.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "psr/log": "~1.0"
-    },
-    "autoload": {
-      "classmap": ["src"]
+  "name": "funkymed/fb",
+  "description": "Simple way to get facebook session",
+  "keywords": ["facebook", "cookieless"],
+  "homepage": "http://github.com/funkymed/fb.git",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cyril Pereira",
+      "email": "cyril.pereira@gmail.com",
+      "homepage": "http://www.cyrilpereira.com"
     }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "files": ["src/fb.php"]
+  }
 }
