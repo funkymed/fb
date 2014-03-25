@@ -1,7 +1,7 @@
 <?php
 
 
-include "fb.php";
+include "../src/fb.php";
 
 $configFB = array(
     'apiKey'=>'azeazeaze',
