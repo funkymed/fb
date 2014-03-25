@@ -78,7 +78,7 @@ class fb {
   }
 
   /**
-   * @return string
+   * @return bool|string
    */
   public function getLoginUrl()
   {
@@ -86,11 +86,10 @@ class fb {
     {
       $tabId = $this->signed_request['page']['id'];
       $url= "http://www.facebook.com/pages/".$tabId."/".$tabId."?sk=app_".$this->apiKey;
+      $login_url = $this->facebook->getLoginUrl(array( 'scope'=>'email,user_about_me','display'=>'page','redirect_uri' => $url,'next' => $url));
+      return $login_url;
     }else{
-      $url = URL::site(Request::current()->uri(), true);
+      return false;
     }
-
-    $login_url = $this->facebook->getLoginUrl(array( 'scope'=>'email,user_about_me','display'=>'page','redirect_uri' => $url,'next' => $url));
-    return $login_url;
   }
 }
